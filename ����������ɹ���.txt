@@ -1,0 +1,50 @@
+1. 7 区分布， 1-5 ------ 31-33   前6区如果某区连续3个0 ，则下棋一定会出现至少1个， 如果连续出现2个0 ，则出现数据概率较大
+
+2. 7区分布，20期平均值 20*6 /(6.6)=18,  31-33 均数为10 个
+3. 4区分布 ， 1-10 检验号码股则出现次数，  如果长期出现如2310 ，等
+
+4 .10 期奇偶比，大小比，  前5期极化， 后5 其平衡  17： 13   -- 13：17
+
+5.尾号分布  ， 4期尾号 18-20 个， 33- 2， 5-1   上期相同尾号3个或2个 ，， 
+
+6 相邻号码分布，  本期相邻， 5期内数据统计 本期相邻4个， 上期相邻10个， 上期相同5 个 
+
+7 遗漏号码规律   5 期内 5个遗漏0 。 4 个遗漏1  
+
+
+篮球分布号码，
+  01-05  06-10 ， 11-16   3 区间分布状况
+ 余3 号码分布  3 6 9 12 15 |  1,4 ，7 10 13 16     |     2 5 8 11 14 
+
+30 期遗漏分布
+0 30 ×0.18   5.4
+1 30 ×0.15   4.5
+2 30 × 0.13  3.9
+3 30× 0.11   3.3
+4-9 30 ×0.3  9
+>10 30 ×0.13 3.9
+
+
+
+Private Sub Command17_Click()
+Dim i, j As Integer
+Dim tempstr As String
+Dim temp123(5) As Integer
+Dim LList(30) As String
+ j = 0
+ List2.Clear
+For i = List1.ListCount - 1 To List1.ListCount - 30 Step -1
+ tempstr = Replace(Mid(List1.List(i), 27, 18), " ", "")
+ LList(j) = Replace(Check123(tempstr), " ", "")
+ j = j + 1
+Next i
+ 
+For i = 0 To 25
+  For j = 1 To 6
+   temp123(j - 1) = Val(Mid(LList(i), j, 1)) + Val(Mid(LList(i + 1), j, 1)) + Val(Mid(LList(i + 2), j, 1)) + Val(Mid(LList(i + 3), j, 1)) + Val(Mid(LList(i + 4), j, 1))
+  Next j
+  List2.AddItem Str(temp123(0)) + Str(temp123(1)) + Str(temp123(2)) + Str(temp123(3)) + Str(temp123(4)) + Str(temp123(5))
+Next i
+End Sub
+
+

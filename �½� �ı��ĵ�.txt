@@ -1,0 +1,52 @@
+'*************************              ' The Second  One Lost  1,1   >10 Mid
+ TempSix(1, 1) = Temp(1, 1)
+ TempSix(1, 2) = Temp(1, 2)
+ TempSix(1, 3) = Temp(Rnd * 3, 1)
+ TempSix(1, 4) = TempM2
+ TempSix(1, 5) = TempM1
+ TempSix(1, 6) = LostR(10, Rnd * LostMax(10))
+'******************************************
+'*************************              ' The Third  One Lost  2,2   >10 Mid
+ TempSix(2, 1) = Temp(2, 1)
+ TempSix(2, 2) = Temp(2, 2)
+ TempSix(2, 3) = Temp(Rnd * 3, 1)
+ TempSix(2, 4) = TempM2
+ TempSix(2, 5) = TempM1
+ TempSix(2, 6) = LostR(10, Rnd * LostMax(10))
+'******************************************
+'*************************              ' The 4 Lost  0,0   >10  No Mid
+ TempSix(3, 1) = Temp(0, 1)
+ TempSix(3, 2) = Temp(0, 2)
+ TempSix(3, 3) = Temp(Rnd * 3, 1)
+ TempSix(3, 4) = Temp(Rnd * 3, 2)
+ TempSix(3, 5) = Temp(Rnd * 3, 2)
+ TempSix(3, 6) = LostR(10, Rnd * LostMax(10))
+'******************************************
+'*************************              ' The 4 Lost  1,1   >10  No Mid
+ TempSix(4, 1) = Temp(1, 1)
+ TempSix(4, 2) = Temp(1, 2)
+ TempSix(4, 3) = Temp(Rnd * 3, 1)
+ TempSix(4, 4) = Temp(Rnd * 3, 2)
+ TempSix(4, 5) = Temp(Rnd * 3, 2)
+ TempSix(4, 6) = LostR(10, Rnd * LostMax(10))
+'******************************************
+'*************************              ' The 4 Lost  0,0   >10  No Mid
+ TempSix(5, 1) = Temp(Rnd * 3, 1)
+ TempSix(5, 2) = Temp(Rnd * 3, 1)
+ TempSix(5, 3) = Temp(Rnd * 3, 1)
+ TempSix(5, 4) = TempM1
+ TempSix(5, 5) = TempM2
+ TempSix(5, 6) = LostR(10, Rnd * LostMax(10))
+'******************************************
+
+TM = Rnd * 5
+
+For i = 1 To 6
+ TempData(TempSix(TM, i)) = 1
+Next i
+For i = 1 To 33
+ If TempData(i) = 1 Then
+   j = j + 1
+   Data(j) = i
+ End If
+Next i

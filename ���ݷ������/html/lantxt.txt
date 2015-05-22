@@ -1,0 +1,30 @@
+    <TR>
+		<TD class=p0>10099</TD>
+		<TD class=p1><B>03 04 17 24 27 30</B></TD>
+		<TD class=p2><B>06</B></TD>
+		<TD class=p3> </TD>
+		<TD class=p3> </TD>
+		<TD class=p3> </TD>	
+		<TD class=p3> </TD>
+		<TD class=p3> </TD>
+        <TD class=p3sel>06</TD>
+		<TD class=p3> </TD>
+		<TD class=p3> </TD>
+		<TD class=p3> </TD>
+		<TD class=p3> </TD>
+		<TD class=p3> </TD>
+		<TD class=p3> </TD>
+		<TD class=p3> </TD>
+		<TD class=p3> </TD>
+		<TD class=p3> </TD>
+		<TD class=p3> </TD>
+	 
+		<TD class=p4> </TD>
+		<TD class=p4>¡ø</TD>
+		<TD class=p5>¡ô</TD>
+		<TD class=p5></TD>
+		<TD class=p6></TD>
+		<TD class=p6>¡ï</TD>
+		<TD class=p6></TD>
+		<TD class=p6></TD>
+    </TR>

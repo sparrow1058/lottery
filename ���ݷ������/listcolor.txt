@@ -1,0 +1,19 @@
+Private Sub ChangeColor(lv As listview)
+    Dim i As Integer
+    If lv.ListItems.Count > 0 Then
+        picBg.Width = lv.Width
+        picBg.Height = lv.ListItems(1).Height * (lv.ListItems.Count)
+        picBg.ScaleHeight = lv.ListItems.Count
+        picBg.ScaleWidth = 1
+        picBg.DrawWidth = 1
+        picBg.Cls
+        For i = 1 To lv.ListItems.Count
+           If i Mod 2 = 0 Then
+             picBg.Line (0, i - 1)-(1, i), RGB(216, 233, 255), BF
+           Else
+             picBg.Line (0, i - 1)-(1, i), RGB(255, 255, 255), BF
+           End If
+        Next
+        lv.Picture = picBg.Image
+    End If
+End Sub
